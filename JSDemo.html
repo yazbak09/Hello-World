@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title> JS Demo by yazan</title>
+        <script>
+            function function2(){
+                document.getElementById("P4").innerHTML=
+                "A scripting or script language is a programming language for a special run-time environment that automates the execution of tasks; the tasks could alternatively be executed one-by-one by a human operator. Scripting languages are often interpreted, rather than compiled";
+            }
+        </script>
+    </head>
+    <body>
+        <h1> This is a JS Demo created and edited by yazan yazbak</h1>
+       <p id='P1'></p>
+       <script>
+           document.getElementById('P1').innerHTML=
+           "Hello javascript";
+       </script> 
+
+
+       <p id='P2'></p>
+       <script>
+           function MyFunction1 (a,b){
+               return a*b;
+           }
+            document.getElementById('P2').innerHTML=
+            MyFunction1(16,3);
+       </script>
+
+            
+            <button onclick="document.getElementById('buttonimage').src='switchOn.jpg'">Turn On the Website</button>
+            <img id="buttonimage" src="switchOff.jpg" alt="On image" width="150px">
+            <button onclick="switchOff()"> Turn Off the Website</button>
+            <script>
+                function switchOff() {
+                    document.getElementById("buttonimage").src="switchOff.jpg";
+
+                }
+            </script>
+            <br>
+            <br>
+        
+
+       
+
+
+       <p id='P3'>This is some random text</p>
+       <button type="button"; onclick="document.getElementById('P3').innerHTML='Changed text'"> change text</button>
+
+       <p id='P4'>Diffetent text</p>
+       <button type="button" onclick="function2()">click on the button</button><br><br>
+
+       <button onclick="this.innerHTML=Date()">what is the time</button>
+       
+
+
+
+    </body>
+</html>
