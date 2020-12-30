@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/Menu.css') }}">
+</head>
+<body>
+      {%  set page_name='About!' %}
+      {% include 'header.html' %}<br><br>
+
+       <h2>Hello this is Yazan yazbak!:)</h2>
+       <h3>happy to see you check out my cv website for more details you can contact with me anytime.</h3>
+
+     {% include('footer.html') %}
+
+</body>
+</html>

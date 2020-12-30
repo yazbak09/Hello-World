@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/Menu.css') }}">
+</head>
+<body>
+       {% set page_name=('Index Page') %}<br>
+       {% include('header.html') %}<br><br>
+      <h2> Hello, {{ name | default('guest',true) | upper }} {{ s_name | lower }}! </h2>
+
+     {% include('footer.html') %}
+
+</body>
+</html>

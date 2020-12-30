@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/Menu.css') }}">
+
+</head>
+<body>
+      {%  set page_name='Home Page' %}
+
+
+     {# <h1> Current page: {{ page_name | upper }}</h1> #}
+
+     {% include('header.html') %}<br>
+     {% if user %}
+
+         <h3> User Name: </h3>
+         <h4 class="{% if user.gender == 'boy' %} boys {% else %} girls {% endif %}">
+             {{ user.firstname }} {{ user.lastname }}</h4>
+
+
+         {%  block cart %}
+         <h3> Hoppies: </h3>
+         <ol>
+                {% for hoppy in hoppies %}
+                    <li>{{ hoppy }} </li>
+                {% endfor %}
+         </ol>
+
+         <br>
+         <h3>Degree: {{ degrees[0] }} </h3>
+         <br>
+
+         <h2>Degrees:</h2>
+            <ul>
+                 {% for degree in degrees %}
+                    <li>{{ degree }}</li>
+                 {% endfor %}
+            </ul>
+            {% endblock %}
+    {% else  %}
+        <h3> Hello stranger</h3>
+    {% endif %}
+
+
+
+
+
+
+
+     {% include('footer.html') %}
+
+</body>
+</html>
