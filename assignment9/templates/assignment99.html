@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>assignment9</title>
+</head>
+<body>
+<h1>Search Form (GET method)</h1>
+<form action="/Assignment9" method="GET">
+    <input name="name" placeholder="Search Person">
+    <input type="submit">
+</form>
+    {{name}}
+<br>
+    {{email}}
+
+
+{% if session %}
+    hi, {{ username }}
+
+
+{% else %}
+
+    <h1>Registration Form (POST method)</h1>
+<form action="/Assignment9" method="POST">
+    <input type="username" placeholder="username" id="username" required><br><br>
+    <input type="E-mail" placeholder="E-mail" id="E-mail" required><br><br>
+{#    <input type="password" placeholder="<P></P>assword" id="password" required><br><br>#}
+{#    <input type="password" placeholder="Confirm Password" id="confirm_password" required><br><br>#}
+    <button type="submit" class="pure-button pure-button-primary">submit</button>
+</form>
+
+         <h4> Your username is: {{ username }}</h4>
+
+ {% endif %}
+<h4>Hello, {{ name | default('user',true) }} {{ username }}!</h4>
+
+{##}
+{#  <label>Password: <input name="password" type="password" onChange="onChange()" /> </label><br />#}
+{#  <label>Confirm : <input name="confirm"  type="password" onChange="onChange()" /> </label><br />#}
+{#  <input type="submit" />#}
+{##}
+{#</form>#}
+
+{#<script src="{{ url_for('static',filename='js/Password.js')}}"></script>#}
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1> The Form Example page</h1>#}
+{#    <h2>The method of Request is: {{ request_method  }}</h2>#}
+{##}
+{#    <h1>Users table</h1>#}
+{#    {% for users in users_list %}#}
+{#     <h3>User ID: {{ users.id }}#}
+{#         User E-mail: {{ users.email }}#}
+{#         User First Name: {{ users.first_name }}#}
+{#         Users Last Name: {{ users.last_name }}#}
+{#         Users Avatar : {{ users.avatar }} </h3>#}
+{#    {% endfor %}#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#POST form:#}
+{#    <form action="/assignment99" method="POST">#}
+{#        <input name="username">#}
+{#        <input name="password">#}
+{#        <input type="submit">#}
+{#    </form>#}
+{#    {% if username %}#}
+{#         <h4> Your username is: {{ username }}</h4>#}
+{#    {% else %}#}
+{#         <h4>Hello, Stranger!</h4>#}
+{#    {% endif %}#}
+{#<br>#}
+{#GET form:#}
+{#    <form action="/assignment99" method="GET">#}
+{#        <input name="name">#}
+{#        <input name="second_name">#}
+{#        <input type="submit">#}
+{#    </form>#}
+{#    {% if second_name %}#}
+{#         <h4>Your second name is: {{ second_name }}</h4>#}
+{#    {% else %}#}
+{#        <h4>Hello, man!</h4>#}
+{#    {% endif %}#}
+{#    <br>#}
+{##}
+{#<h4>Hello, {{ name | default('user',true) }} {{ second_name }}!</h4>#}
+{##}
+{#</body>#}
+{#</html>#}

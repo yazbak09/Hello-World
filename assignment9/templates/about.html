@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/Menu.css') }}">
+</head>
+<body>
+      {%  set page_name='About!' %}
+      {% include 'header.html' %}<br><br>
+      {%  if name %}
+        <h2>Hello, {{ name }}</h2><br>
+      {% endif %}
+
+      {% if session.get('logged_in') %}
+       <h2>Hello {{ session.get('username') }}!:)</h2>
+      {% else %}
+       <h3>Hello, Stranger.</h3>
+      {% endif %}
+
+     {% include('footer.html') %}
+
+</body>
+</html>

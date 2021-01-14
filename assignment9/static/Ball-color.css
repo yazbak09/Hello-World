@@ -1,0 +1,54 @@
+
+html,body{ background-color: rgb(201, 147, 77);}
+
+
+.ball{
+ height: 400px;
+ width: 400px;
+ background-color: rgb(255, 123, 0);
+ border-radius: 100%;
+ animation: 
+ pulse 2s ease infinite alternate,/* חייבים להוסיף זמן כי ברירת המחדל היא 0 שניות*/
+ nudge 8s linear infinite
+
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h1,p{
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    color: silver;
+}
+
+    
+ a{
+    text-align: center;
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    color: silver;
+    margin-inline-start: 150px;
+
+
+ }
+
+@keyframes pulse {
+
+from{background-color: rgb(56, 50, 56);}
+to {background-color: rgb(92, 57, 57);}
+}
+@keyframes nudge{
+    0%, 100% {/*שינוי המיקום*/ 
+        transform: translate(0,0);/* בהתחלה רוצים אותו שלא יזוז*/
+    }
+    50% {
+        transform: translate(100px,0);
+    }
+    80% {
+        transform: translate(-100px,0);
+    }
+}
+
