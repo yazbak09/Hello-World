@@ -2,23 +2,27 @@
 <html>
     <head>
         <title> Yazan-CV </title>
-		<link rel="stylesheet" href="style.css">
-		<script src="scripts.js"></script>
+
+        <script src="{{url_for('static', filename='scripts.js')}}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+
 	</head>
 
-	
+
+
+
     <body id="top">
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="yazan.jpg" />
+            <img src="{{url_for('static', filename='yazan.jpg')}}" />
 		</div>
-		
+
 		<div id="name">
 			<h1 class="quickFade delayTwo">Yazan Yazbak</h1>
-			<h3 class="quickFade delayThree"><a href="CVReview.pdf" download> CV Review </a></h1>
+			<h3 class="quickFade delayThree"><a href="{{ url_for('static',filename='CVReview.pdf') }}"> CV Review </a></h3>
 		</div>
-		
+
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>E-mail: <a href="mailto:yazbaky@post.bgu.ac.il" target="_blank">yazbaky@post.bgu.ac.il</a></li>
@@ -29,16 +33,16 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	
+
 	<div id="mainArea" class="quickFade delayFive">
 		<section>
 			<article>
 				<div class="sectionTitle">
 					<h1>Personal Profile</h1>
 				</div>
-				
+
 				<div class="sectionContent">
-					<p>Well-educated and knowledgeable Industrial Engineer with a proven track record of employer satisfaction in improving 
+					<p>Well-educated and knowledgeable Industrial Engineer with a proven track record of employer satisfaction in improving
 					all manufacturing processes and procedures, developing and managing production budgets, and completing detailed production forecasts.
 					Offers an Industrial Engineering degree from a top university, strong attention to detail and accuracy, great analytical skills,
 					and excellent time management abilities.</p>
@@ -46,13 +50,13 @@
 			</article>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Work Experience</h1>
 			</div>
-			
+
 			<div class="sectionContent">
 				<article>
 					<h2>Unilever Company</h2>
@@ -63,13 +67,13 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Interpersonal Skills</h1>
 			</div>
-			
+
 			<div class="sectionContent">
 				<ul class="keySkills">
 					<li>Ability to Work under Pressure</li><br>
@@ -77,18 +81,18 @@
 					<li>Communication Skills</li><br>
 					<li>Good Team Player</li>
 					<li>Time Management</li><br>
-				
+
 				</ul>
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Education</h1>
 			</div>
-			
+
 			<div class="sectionContent">
 			 <h2>BG-University</h2>
 			 <p class="subDetails">Student</p>
@@ -97,16 +101,19 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-        <!--Begin Contact Section-->  
+
+        <!--Begin Contact Section-->
   <div id="connect">
 	    <div class="sectionTitle">
-		 <h1>Contact Me</h1>
+		     <h1>Contact Me</h1>
 
-		 <!--contact list =fetch -->
-		 <h2><a href="JSON.html">Contact List</a></h2>
+           <!--contact list =fetch -->
+{#                    <link rel="stylesheet" href="{{ url_for('templates', filename='/JSON.html') }}">#}
+
+{#		     <h2><a href="{{ url_for(filename='JSON.html') }}">Contact List</a></h2>#}
 
 	     </div>
+
 	<div class="top-divider"></div>
 		<div class="content">
 			<div id="form">
@@ -121,6 +128,7 @@
 				</form>
 			</div>
 		</div>
+  </div>
 
 	</div>
 </div>
@@ -133,4 +141,3 @@
 
 </body>
 </html>
-    

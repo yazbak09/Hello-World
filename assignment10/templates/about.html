@@ -12,8 +12,11 @@
         <h2>Hello, {{ name }}</h2><br>
       {% endif %}
 
-       <h2>Hello this is Yazan yazbak!:)</h2>
-       <h3>happy to see you check out my cv website for more details you can contact with me anytime.</h3>
+      {% if session.get('logged_in') %}
+       <h2>Hello {{ session.get('username') }}!:)</h2>
+      {% else %}
+       <h3>Hello, Stranger.</h3>
+      {% endif %}
 
      {% include('footer.html') %}
 

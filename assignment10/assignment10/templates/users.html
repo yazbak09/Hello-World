@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2> <a href="/insert_user">Insertion form</a></h2>
+
+###########################################################################
+
+
+
+    <h1> Update form</h1>
+    <form action="/update" method="POST">
+          <input name="id" placeholder="Enter ID">
+         <br>
+        <label for="email">Email:</label>
+        <br>
+        <input name="email" type="email" id="email">
+        <br>
+        <br>
+        <button type ="submit"> UPDATE</button>
+
+    </form><br>
+#########################################################################
+
+
+<h2>Deletion form</h2>
+    <h4>choose number of id to delete user in the list below:</h4>
+
+    <form action="/delete_user" method="GET">
+        User ID: <lable><input name="id" type="text"></lable>
+        <input type ="submit">
+
+    </form><br>
+
+
+    <h1>List of users: </h1>
+    <ul>
+    {% if users %}
+        {% for user in users %}
+            <li>
+            {{ user.id }}: <b> {{ user.first_name }} {{ user.last_name }} </b>,  {{ user.email }} <br>Password: {{ user.password }}
+             </li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+
+</body>
+</html>

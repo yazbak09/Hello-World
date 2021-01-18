@@ -1,0 +1,42 @@
+
+.Navigation ul {
+    font: bold 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    float: Right;
+}
+.Navigation li {
+    display: inline-block;
+    float: Right
+}
+.Navigation a {
+    color: green;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+.Navigation a:hover {
+    background: blue;
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+
+}
+.Menu {
+    top: 12px;
+    right:30px ;
+    font-size: 18px;
+}
+
+footer {
+    font-family: "ourFont";
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:50px;
+    width:100%;
+    background:#5e6063;
+    color: white;
+    font-size:80%;
+    text-align: center;
+}
+body{
+    direction: rtl;
+    padding-bottom: 100px;
+    margin: 0;
+}
